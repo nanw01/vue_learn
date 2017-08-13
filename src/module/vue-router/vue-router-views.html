@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vue-嵌套路由</title>
+    <title>命名视图</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -19,14 +19,18 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="app">
-        <router-link to="/user/alex">Go to Foo</router-link><br />
-        <router-link to="/user/alex/profile">Go to profile</router-link><br />
-        <router-link to="/user/alex/posts">Go to posts</router-link><br />
-        <router-view></router-view>
-
-        <a class="button" @click="router_to">代码跳转</a>
-        <a class="button" @click="router_back">返回上一页</a>
-
+        <h1> Named Views </h1>
+        <ul>
+            <li>
+                <router-link to="/">/</router-link>
+            </li>
+            <li>
+                <router-link to="/other">/other</router-link>
+            </li>
+        </ul>
+        <router-view class="view one">1</router-view>
+        <router-view class="view two" name="a">2</router-view>
+        <router-view class="view three" name="b">3</router-view>
     </div>
 </body>
 

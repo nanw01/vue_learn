@@ -40,6 +40,7 @@ const router = new VueRouter({
   routes: [
     {
       path: '/user/:username',
+
       component: User,
       children: [
         {
@@ -51,6 +52,7 @@ const router = new VueRouter({
           // 当 /user/:id/profile 匹配成功,
           //   Userprofile 会被渲染在 User 的<router-view />中
           path: 'profile',
+          name: 'profile_name',
           component: UserProfile
         },
         {
@@ -67,8 +69,21 @@ new Vue({
   router,
   methods: {
     router_to: function () {
-      console.log('router.push("/user/alex/profile")')
-      router.push('/user/alex/profile')
+      const address = '/user/alex/profile'
+      console.log(address)
+      // 字符串
+      // router.push(address)
+      // 对象
+      // router.push({ path: address })
+      // 命名的路由
+      router.push(
+        {
+          name: 'profile_name',
+          params: { userId: 123 }
+        }
+      )
+    // 带查询参数，变成 /register?plan=private
+    // router.push({ path: address, query: { plan: 'private' } })
     },
     router_back: function () {
       console.log('go()')
