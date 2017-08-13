@@ -1,6 +1,6 @@
-# vue-rount-learn
+# vue-learn
 
-> A Vue.js project
+> A Vue.js project 多页面支持
 
 ## Build Setup
 
