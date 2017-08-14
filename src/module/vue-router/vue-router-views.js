@@ -1,10 +1,10 @@
 // 0. 如果使用模块化机制编程，導入Vue和VueRouter，要调用 Vue.use(VueRouter)
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueBlu from 'vue-blu'
-import 'vue-blu/dist/css/vue-blu.min.css'
+// import VueBlu from 'vue-blu'
+// import 'vue-blu/dist/css/vue-blu.min.css'
 
-Vue.use(VueBlu)
+// Vue.use(VueBlu)
 Vue.use(VueRouter)
 
 const Foo = { template: '<div>foo</div>' }
@@ -34,7 +34,13 @@ const router = new VueRouter({
   ]
 })
 
-Vue({
+new Vue({
   router,
-  el: '#app'
-})
+  data: {
+
+  },
+  methods: {
+
+  }
+}
+).$mount('#app')

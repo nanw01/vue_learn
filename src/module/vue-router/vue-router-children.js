@@ -7,8 +7,9 @@ Vue.use(VueBlu)
 Vue.use(VueRouter)
 
 const UserPosts = {
-  template: `
+  template: ` <transition name="slide">
         <div>UserPosts : {{ $route.params }}</div>
+        </transition>
         `
 }
 
@@ -20,7 +21,9 @@ const UserHome = {
 
 const UserProfile = {
   template: `
-    <div>UserProfile : {{ $route.params }} </div>
+    <transition name="fade">
+      <div>UserProfile : {{ $route.params }} </div>
+    </transition>
     `
 }
 
