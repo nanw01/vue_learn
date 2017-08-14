@@ -11,5 +11,10 @@ export default new Router({
       name: 'Hello',
       component: Hello
     }
-  ]
+  ],
+  data () {
+    return {
+
+    }
+  }
 })
